@@ -1,0 +1,308 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in element width/height */
+}
+
+body {
+    background-color: #e6f0ff; /* Soft blue background */
+    font-family: 'Inter Tight', sans-serif; /* Modern, clean font */
+    color: #111; /* Default text color */
+}
+
+/* Container for search section */
+.section-search {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+#website-logo {
+    display: block;
+    margin: 20px auto 0;
+    height: 30px;
+    width: auto;
+}
+
+/* Hero/Main image */
+#main-section-image {
+    display: block;
+    margin: 80px auto 0;
+    max-width: 750px;
+}
+
+/* Headline below the image */
+#headline {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Search bar container */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Wrapper for input with icon */
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Search icon inside input */
+.search-icon {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    pointer-events: none; /* Clicks go through the icon */
+}
+
+/* Input styling */
+.search-input-wrapper input {
+    padding: 25px 45px 25px 65px; /* Padding for icon spacing */
+    width: 100%;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 35px;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, border 0.2s ease;
+}
+
+/* Filter intro text */
+.filter-intro {
+    text-align: center;
+    margin: 10px 0 20px;
+    color: rgb(121, 121, 121);
+}
+
+/* Filter dropdowns layout */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Dropdown styling */
+.filters select {
+    flex: 1 1 calc((900px - 45px) / 4);
+    min-width: 180px;
+    background-color: #e6f0ff;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-family: 'Inter Tight', sans-serif;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    color: rgb(60, 60, 60);
+    font-weight: 300;
+    text-align: center;
+    text-align-last:center;
+}
+
+/* Dropdown hover effect */
+.filters select:hover {
+    background-color: #ecf4ff;
+    border-color: #a5a5a5;
+}
+
+/* Result container */
+#results {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+    margin-bottom: 200px;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Table styling */
+#schemeTable {
+    width: 1150px; /* Fixed width */
+    margin: 0 auto; /* Center the table */
+    table-layout: fixed; /* Ensures consistent column width */
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 15px;
+    color: #333;
+    text-align: left;
+}
+
+/* Table header */
+#schemeTable thead {
+    background-color: #f2f8ff;
+    font-weight: 600;
+}
+
+/* Table cells */
+#schemeTable th,
+#schemeTable td {
+    padding: 14px 20px;
+border-bottom: 1px solid #ddd;
+}
+
+/* Rounded corners and vertical divider for first column */
+#schemeTable th:first-child,
+#schemeTable td:first-child {
+    border-top-left-radius: 12px;
+    border-right: 1px solid #ddd; /* Light vertical line */
+}
+
+/* Rounded corners for last column header and cell */
+#schemeTable th:last-child,
+#schemeTable td:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* Hover effect on rows */
+#schemeTable tbody tr:hover {
+    cursor: pointer;
+    background-color: #f5faff;
+    transition: background-color 0.2s ease;
+}
+
+#schemeTable td:first-child {
+    font-weight: 600;         /* Bold */
+    text-decoration: underline; /* Underline */
+    color: #5c89ae;              /* Lighter than black (adjust as needed) */
+}
+
+
+/* =======================
+   Modal Styling
+   ======================= */
+
+/* Fullscreen modal background with blur */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.2); /* Light dark overlay */
+    backdrop-filter: blur(8px); /* Background blur */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide modal when .hidden is added */
+.modal.hidden {
+    display: none;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: fadeIn 0.3s ease; /* Entry animation */
+}
+
+/* Modal heading */
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #222;
+}
+
+/* Modal description text */
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+ #modal-details p {
+  font-size: 15px;
+  color: #444;
+}
+
+#modal-reviews-section {
+  margin-top: 25px;
+}
+
+#modal-reviews-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+#modal-reviews-list {
+  padding-left: 20px;
+}
+
+#modal-reviews-list li {
+  margin-bottom: 8px;
+  color: #555;
+  font-style: italic;
+}
+
+.info-box {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0; /* Soft gray border */
+  border-radius: 15px;
+  padding: 20px 40px;
+  margin-top:10px;
+}
+
+/* Close button (X) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

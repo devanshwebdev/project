@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Scheme Check</title>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="section-search">
+        <img src="images/Logo.svg" id="website-logo">
+        <img src="images/Main-Section.png" id="main-section-image">
+        <h1 id="headline">Find Government Schemes for Entrepreneurs</h1>
+
+        <div class="search-bar">
+        <div class="search-input-wrapper">
+            <img src="images/search.svg" alt="Search" class="search-icon" />
+            <input type="text" placeholder="Enter Scheme Name..." />
+        </div>
+        </div>
+
+<div class="filter-section">
+    <p class="filter-intro">Find Schemes Based on:</p>
+
+<div class="filters">
+  <select id="filter-state">
+    <option selected>State</option>
+    <option>All States</option>
+    <option>Assam</option>
+    <option>Bihar</option>
+    <option>Delhi</option>
+    <option>Goa</option>
+    <option>Gujarat</option>
+    <option>Haryana</option>
+    <option>Jharkhand</option>
+    <option>Karnataka</option>
+    <option>Kerala</option>
+    <option>Madhya Pradesh</option>
+    <option>Maharashtra</option>
+    <option>Odisha</option>
+    <option>Punjab</option>
+    <option>Rajasthan</option>
+    <option>Tamil Nadu</option>
+    <option>Telangana</option>
+    <option>Uttar Pradesh</option>
+    <option>West Bengal</option>
+  </select>
+
+  <select id="filter-industry">
+    <option selected>Industry</option>
+    <option>Agriculture</option>
+    <option>Agroforestry</option>
+    <option>Automotive</option>
+    <option>Education</option>
+    <option>Fisheries</option>
+    <option>Handicrafts</option>
+    <option>IT Services</option>
+    <option>Legal Services</option>
+    <option>Manufacturing</option>
+    <option>Multi-sector</option>
+    <option>Renewable Energy</option>
+    <option>Retail</option>
+    <option>Skill Development</option>
+    <option>Smart Cities</option>
+    <option>Technology</option>
+    <option>Textile</option>
+    <option>Tourism</option>
+    <option>Traditional Arts</option>
+  </select>
+
+  <select id="filter-target-group">
+    <option selected>Target Group</option>
+    <option>Artisans</option>
+    <option>Coastal Communities</option>
+    <option>Entrepreneurs</option>
+    <option>Farmers</option>
+    <option>Farmers and Cooperatives</option>
+    <option>MSMEs</option>
+    <option>Small Farmers</option>
+    <option>Small Traders</option>
+    <option>Startups</option>
+    <option>Students and Innovators</option>
+    <option>Tribal Youth</option>
+    <option>Underprivileged Students</option>
+    <option>Urban Startups</option>
+    <option>Women Entrepreneurs</option>
+    <option>Youth</option>
+    <option>Youth Entrepreneurs</option>
+    <option>Young Artisans</option>
+  </select>
+
+  <select id="filter-support-type">
+    <option selected>Support Type</option>
+    <option>Advisory</option>
+    <option>Capacity Building</option>
+    <option>Competition Grant</option>
+    <option>Digital Access</option>
+    <option>Fellowship</option>
+    <option>Financial</option>
+    <option>Grant</option>
+    <option>Grant + Training</option>
+    <option>Heritage Support</option>
+    <option>Incentive</option>
+    <option>Incubation</option>
+    <option>Infrastructure</option>
+    <option>Innovation Grant</option>
+    <option>Loan Assistance</option>
+    <option>R&D Support</option>
+    <option>Subsidy</option>
+    <option>Tech Adoption</option>
+    <option>Technology Support</option>
+    <option>Training</option>
+  </select>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div id="results">
+  <div class="table-wrapper">
+    <table id="schemeTable">
+      <thead>
+        <tr>
+          <th>Scheme Name</th>
+          <th>State</th>
+          <th>Industry</th>
+          <th>Target Group</th>
+          <th>Support Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be injected here -->
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+
+<div id="scheme-modal" class="modal hidden">
+<div class="modal-content">
+  <span class="close-btn">&times;</span>
+  <h2 id="modal-scheme-name"></h2>
+  <p id="modal-scheme-description"></p>
+
+  <div id="modal-details">
+    <div class="info-box"><p><strong>Benefits:</strong> <span id="modal-benefits"></span></p></div>
+    <div class="info-box"><p><strong>Eligibility:</strong> <span id="modal-eligibility"></span></p></div>
+    <div class="info-box"><p><strong>Application Process:</strong> <span id="modal-application-process"></span></p></div>
+    <div class="info-box"><p><strong>Documents Required:</strong> <span id="modal-documents-required"></span></p> </div> 
+    <div class="info-box"><p><strong>Funds Utilized:</strong> <span id="modal-funds-utilized"></span></p></div>
+    <div class="info-box"><p><strong>Beneficiaries Reached:</strong> <span id="modal-beneficiaries-reached"></span></p></div>
+    <div id="modal-reviews-section">
+  <h3>Beneficiary Reviews</h3>
+  <ul id="modal-reviews-list"></ul>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
